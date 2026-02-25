@@ -18,6 +18,7 @@ app.get('/', (req, res) => {
   if (mode === 'subscribe' && token === verifyToken) {
     console.log('WEBHOOK VERIFIED');
     res.status(200).send(challenge);
+    
   } else {
     res.status(403).end();
   }
